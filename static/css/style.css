@@ -1,79 +1,317 @@
-/* static/css/style.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-nav {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+/* Hero Section */
+.hero {
     text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1e90ff, #87cefa); /* Blue gradient */
+    color: white;
+    border-radius: 15px;
+    margin: 20px auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero .brand-name {
+    color: #f1f1ed; /* Color of 'Craftmania' text */
+    text-decoration: none;
+}
+
+.hero p {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+/* Buttons under Hero */
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.hero-buttons .btn {
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 25px;
     color: white;
     text-decoration: none;
-    padding: 10px;
-    margin: 0 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
-nav a:hover {
-    background-color: #ddd;
-    color: #333;
+.btn-home {
+    background-color: rgb(251, 30, 255); /* Blue */
 }
-@media (max-width: 1024px){
-    nav{
-        padding: 15px;
-    }
-    nav a {
-        font-size: 14px;
-        margin-right: 15px;
-    }
+
+.btn-register {
+    background-color: #28a745; /* Green */
 }
-.content {
-    margin-top: 20px;
+
+.btn-login {
+    background-color: rgb(251, 89, 30); /* Red */
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-home:hover {
+    background-color: #0a74da;
+}
+
+.btn-register:hover {
+    background-color: #218838;
+}
+
+.btn-login:hover {
+    background-color: #d15b5b;
+}
+
+/* Register Page Styles */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e90ff, #87cefa); /* Blue gradient */
     padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
-css for image style
+
+.register-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    margin-top: -100px;
+}
+
+.register-form h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.register-form p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 1em;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #1e90ff;
+    outline: none;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Hover Effects */
+.btn-register {
+    background-color: #1e90ff;
+    color: white;
+}
+
+.btn-register:hover {
+    background-color: #0a74da;
+}
+
+/* Additional Styles for Text and Buttons */
+.register-container p {
+    color: #777;
+    font-size: 1.2em;
+}
+
+.register-container a {
+    text-decoration: none;
+    color: #1e90ff;
+    font-weight: 600;
+}
+
+.register-container a:hover {
+    text-decoration: underline;
+}
+
+/* Product List Styling */
 .product-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 40px;
 }
 
+/* Individual Product Item */
 .product-item {
-    width: 30%;
+    flex: 1 1 calc(30% - 20px);
     text-align: center;
-    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
 }
 
 .product-item img {
     width: 100%;
-    max-width: 250px;
     height: auto;
+    transition: transform 0.3s ease;
 }
 
-.product-item p {
+.product-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Product Name and Price */
+.product-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.product-price {
+    color: #ff7e5f;
     font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
-.product-item button {
+/* Add to Cart Button */
+button {
     background-color: #28a745;
     color: white;
-    padding: 10px;
+    padding: 12px 30px;
     border: none;
+    border-radius: 25px;
     cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
-.product-item button:hover {
+button:hover {
     background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-h1 {
-    color: #333;
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(45% - 20px);
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.8em;
+    }
+
+    .product-name {
+        font-size: 1.2em;
+    }
+
+    .register-form {
+        padding: 30px;
+    }
+
+    .register-form h2 {
+        font-size: 2em;
+    }
+
+    .register-form p {
+        font-size: 1em;
+    }
+
+    .input-group input {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 100%;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .register-form {
+        padding: 20px;
+    }
+
+    .register-form h2 {
+        font-size: 1.8em;
+    }
+
+    .register-form p {
+        font-size: 1em;
+    }
+
+    .input-group input {
+        font-size: 1em;
+        padding: 10px;
+    }
 }
